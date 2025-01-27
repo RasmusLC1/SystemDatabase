@@ -31,6 +31,13 @@ namespace HelloWorldApp
             var employeeHandler = EmployeeHandler.Instance;
             var ticketHandler = TicketHandler.Instance;
             var customerHandler = CustomerHandler.Instance;
+            new Employee("John Jones", new DateTime(1989, 3, 12), "Dev", "Boston", 1300);
+            new Employee("Adam", new DateTime(1997, 2, 22), "Assistant", "New York", 1200);
+            new Employee("Sigrid", new DateTime(1985, 7, 4), "Manager", "Boston", 1600);
+            new Employee("Sigrid", new DateTime(1985, 7, 4), "Manager", "Boston", 1600);
+
+
+            
 
             // Display the employee information
             AddEmployeeLabels(employeeHandler);
