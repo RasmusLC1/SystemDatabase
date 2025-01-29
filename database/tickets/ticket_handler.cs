@@ -1,8 +1,8 @@
 namespace Tickets{
-class TicketHandler
+public class TicketHandler
     {
         // Singleton instance
-        private static TicketHandler _instance;
+        private static TicketHandler? _instance;
         private List<Ticket> tickets;
 
         // Private constructor to prevent external instantiation
@@ -46,7 +46,7 @@ class TicketHandler
             return false;
         }
 
-        public Label PrintTicket(int id){
+        public Label? PrintTicket(int id){
             var ticket = tickets.Find(ticket => ticket.ID == id);
 
             if (ticket == null){
@@ -62,7 +62,7 @@ class TicketHandler
         public int GetNextID(){
             // No tickets yet, return 0
             if (tickets.Count == 0){
-                return 0; 
+                return 1; 
             }
 
             int maxID = tickets.Max(ticket => ticket.ID);
