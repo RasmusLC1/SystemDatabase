@@ -4,6 +4,7 @@ using System.Reflection;
 using Xunit;
 using Tickets;
 using Employees;
+using Customers;
 
 namespace TicketDatabase.Tests
 {
@@ -30,15 +31,13 @@ namespace TicketDatabase.Tests
         public void Constructor_SetsPropertiesCorrectly()
         {
             // Arrange
-            int employeeID = 1;
             int customerID = 100;
             int price = 250;
 
             // Act
-            var ticket = new Ticket(employeeID, customerID, price);
+            var ticket = new Ticket(customerID, price);
 
             // Assert
-            Assert.Equal(employeeID, ticket.EmployeeID);
             Assert.Equal(customerID, ticket.CustomerID);
             Assert.Equal(price, ticket.Price);
             Assert.Null(ticket.Completed); // Should not be completed initially
@@ -72,15 +71,21 @@ namespace TicketDatabase.Tests
             Assert.NotNull(ticket.Completed);
             Assert.True(ticket.Completed <= DateTime.Now);
         }
+        [Fact]
+        public void AssignEmployeeToTicket(){
+            var ticket = new Ticket(1);
+
+        }
 
         [Fact]
         public void ReturnTicketInfo_SetsLabelTextCorrectly()
         {
             // Arrange
             var employeeHandler = EmployeeHandler.Instance;
-            new Employee("John Doe", new DateTime(1980, 1, 1), "Developer", "City", 50000);
-
-            var ticket = new Ticket(1, 100);
+            Employee employee = new Employee("John Doe", new DateTime(1980, 1, 1), "Developer", "City", 50000);
+            Customer customer = new Customer("Test User", new DateTime(1985, 4, 2), "Test Address");
+            var ticket = new Ticket(customer.ID, 2500);
+            employee.AddTicket(ticket.ID);
 
             // Act
             Label label = ticket.ReturnTicketInfo();
@@ -88,8 +93,9 @@ namespace TicketDatabase.Tests
             // Assert
             Assert.NotNull(label);
             Assert.Contains($"ID: {ticket.ID}", label.Text);
-            Assert.Contains($"Employee: John Doe", label.Text);
-            Assert.Contains($"Age: {ticket.GetAge()}", label.Text);
+            Assert.Contains($"Employee: {employee.Name}", label.Text);
+            Assert.Contains($"Customer: {customer.Name}", label.Text);
+            Assert.Contains($"Price: {ticket.Price}", label.Text);
         }
     }
 }

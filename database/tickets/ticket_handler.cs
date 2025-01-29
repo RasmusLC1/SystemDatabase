@@ -1,3 +1,5 @@
+using Microsoft.VisualBasic;
+
 namespace Tickets{
 public class TicketHandler
     {
@@ -56,7 +58,29 @@ public class TicketHandler
             return ticket.ReturnTicketInfo();
         }
 
-        
+        public int? GetTicketCustomer(int id) {
+            var ticket = tickets.Find(ticket => ticket.ID == id);
+            if (ticket == null){
+                return null; 
+            }
+            return ticket.CustomerID;
+        }
+
+        public int? GetTicketAgent(int id) {
+            var ticket = tickets.Find(ticket => ticket.ID == id);
+            if (ticket == null){
+                return null; 
+            }
+            return ticket.EmployeeID;
+        }
+
+        public Ticket? GetTicket(int id) {
+            var ticket = tickets.Find(ticket => ticket.ID == id);
+            if (ticket == null){
+                return null; 
+            }
+            return ticket;
+        }
 
 
         public int GetNextID(){

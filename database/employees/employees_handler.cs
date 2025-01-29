@@ -99,6 +99,16 @@ namespace Employees
             return employee.Name;
         }
 
+        public Employee? GetEmployee(int id){
+            var employee = employees.Find(employee => employee.ID == id);
+            if (employee == null)
+            {
+                return null;
+            }
+
+            return employee;
+        }
+
 
         public int GetNextID()
         {
