@@ -8,7 +8,8 @@ namespace Customers{
         public string Name {get; private set;}
         public DateTime Birthday {get; private set;}
         public string Address {get; private set;}
-        private List<int> tickets;
+        private List<int> tickets  = new List<int>();
+
         Label EmployeeLabel = new Label();
 
 
@@ -17,7 +18,6 @@ namespace Customers{
         Name = name;
         Birthday = birthday;
         Address = address;
-        tickets = new List<int>();
         customerHandler.AddCustomer(this);
     }
 
@@ -30,6 +30,8 @@ namespace Customers{
         tickets.Add(ticketID);
         return;
     }
+
+   
 
     
 

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Reflection;
 using Xunit;
 using Employees;
+using Tickets;
+using Customers;
 
 namespace EmployeeDatabase.Tests
 {
@@ -95,6 +97,20 @@ namespace EmployeeDatabase.Tests
             Assert.Contains($"City: {employee.City}", label.Text);
             Assert.Equal("Arial", label.Font.Name);
             Assert.True(label.AutoSize);
+        }
+
+        [Fact]
+        public void AddTicket(){
+            // Arrange
+            var employee = new Employee("Test User", new DateTime(1990, 1, 1), "Tester", "TestCity", 2000);
+            Assert.Empty(employee.tickets);
+
+            var customer = new Customer("Test User", new DateTime(1995, 12, 4), "Test Address");
+
+            var ticket = new Ticket(customer.ID, 100);
+
+            employee.AddTicket(ticket.ID);
+        
         }
     }
 }

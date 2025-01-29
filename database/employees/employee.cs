@@ -1,6 +1,9 @@
+using Tickets;
+
 namespace Employees{
     public class Employee {
         private static EmployeeHandler employeeHandler = EmployeeHandler.Instance;
+        private static TicketHandler ticketHandler= TicketHandler.Instance;
         public int ID {  private set;get; }
         public string Name {get; private set;}
         public string Username {get; private set;}
@@ -8,6 +11,7 @@ namespace Employees{
         public string Position{get; private set;}
         public string City {get; private set;}
         public int Salary{get; private set;}
+        public List<int> tickets{get; private set;} = new List<int>();
         Label EmployeeLabel = new Label();
 
     public Employee(string name, DateTime birthday, string position, string city, int salary){
@@ -43,6 +47,26 @@ namespace Employees{
         string firstTwoOfLastName = lastName.Length >= 2 ? lastName.Substring(0, 2) : lastName;
         string username = firstTwoOfFirstName+firstTwoOfLastName;
         return username;
+    }
+
+    public void AddTicket(int ticketID){
+        var ticket = ticketHandler.GetTicket(ticketID);
+        if (ticket == null) {
+            return;
+        }
+        tickets.Add(ticketID);
+        ticket.AddEmployee(this.ID);
+        return;
+    }
+
+     public void CloseTicket(int ticketID){
+        var ticket = ticketHandler.GetTicket(ticketID);
+
+        if (ticket == null){
+            return;
+        }
+        ticket.SetComplete();
+        return;
     }
 
     public Label ReturnEmployeeInfo()

@@ -55,6 +55,28 @@ namespace Customers
             return;
         }
 
+        public Customer? GetCustomer(int id){
+            var customer = customers.Find(customer => customer.ID == id);
+            if (customer == null)
+            {
+                return null;
+            }
+
+            return customer;
+        }
+
+        public string? GetCustomerName(int id)
+        {
+            var customer = customers.Find(customer => customer.ID == id);
+
+            if (customer == null)
+            {
+                return null;
+            }
+
+            return customer.Name;
+        }
+
         public Label? PrintCustomer(int id)
         {
             var customer = customers.Find(customer => customer.ID == id);
