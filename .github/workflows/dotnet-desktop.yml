@@ -41,7 +41,7 @@ jobs:
 
     # Execute all unit tests in the solution
     - name: Build the project
-      run: dotnet build ${{ env.Solution_Name }} --configuration ${{ matrix.configuration }} --no-restore
+      run: dotnet build ${{ env.Solution_Name }} --configuration ${{ matrix.configuration }} --no-restore --logger "console;verbosity=detailed"
 
       
     # Execute all unit tests in the solution
