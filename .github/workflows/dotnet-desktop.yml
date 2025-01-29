@@ -18,7 +18,7 @@ jobs:
                              # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
 
     env:
-      Solution_Name: EmployeeDatabase.sln 
+      Solution_Name: database/EmployeeDatabase.sln
 
     steps:
     - name: Checkout
@@ -38,10 +38,10 @@ jobs:
 
     # Execute all unit tests in the solution
     - name: Build the project
-      run: dotnet build EmployeeDatabase/database
+      run: dotnet build database
       
     # Execute all unit tests in the solution
     - name: Execute unit tests
-      run: dotnet test EmployeeDatabase/database_test
+      run: dotnet test database_test
 
 
