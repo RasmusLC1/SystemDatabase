@@ -3,7 +3,7 @@ namespace Employees
     public class EmployeeHandler
     {
         // Singleton instance
-        private static EmployeeHandler _instance;
+        private static EmployeeHandler? _instance;
         private List<Employee> employees;
 
         // Private constructor to prevent external instantiation
@@ -60,7 +60,7 @@ namespace Employees
             return false;
         }
 
-        public Label PrintEmployee(int id)
+        public Label? PrintEmployee(int id)
         {
             var employee = employees.Find(employee => employee.ID == id);
 
@@ -74,7 +74,7 @@ namespace Employees
 
         public int getIDByName(string name)
         {
-            var employee = employees.FirstOrDefault(e => e.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
+            var employee = employees.Find(employee => employee.Name == name);
 
             if (employee == null)
             {
@@ -87,7 +87,7 @@ namespace Employees
         }
 
 
-        public string GetEmployeeName(int id)
+        public string? GetEmployeeName(int id)
         {
             var employee = employees.Find(employee => employee.ID == id);
 

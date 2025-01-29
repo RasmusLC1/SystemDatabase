@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\smoot\\Documents\\Projects\\EmployeeDatabase\\EmployeeDatabase\\EmployeeDatabase.Tests\\EmployeeDatabase.Tests.csproj": {}
+    "C:\\Users\\smoot\\Documents\\Projects\\EmployeeDatabase\\EmployeeDatabase\\database_test\\EmployeeDatabase.Tests.csproj": {}
   },
   "projects": {
     "C:\\Users\\smoot\\Documents\\Projects\\EmployeeDatabase\\EmployeeDatabase\\database\\EmployeeDatabase.csproj": {
@@ -60,14 +60,14 @@
         }
       }
     },
-    "C:\\Users\\smoot\\Documents\\Projects\\EmployeeDatabase\\EmployeeDatabase\\EmployeeDatabase.Tests\\EmployeeDatabase.Tests.csproj": {
+    "C:\\Users\\smoot\\Documents\\Projects\\EmployeeDatabase\\EmployeeDatabase\\database_test\\EmployeeDatabase.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\smoot\\Documents\\Projects\\EmployeeDatabase\\EmployeeDatabase\\EmployeeDatabase.Tests\\EmployeeDatabase.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\smoot\\Documents\\Projects\\EmployeeDatabase\\EmployeeDatabase\\database_test\\EmployeeDatabase.Tests.csproj",
         "projectName": "EmployeeDatabase.Tests",
-        "projectPath": "C:\\Users\\smoot\\Documents\\Projects\\EmployeeDatabase\\EmployeeDatabase\\EmployeeDatabase.Tests\\EmployeeDatabase.Tests.csproj",
+        "projectPath": "C:\\Users\\smoot\\Documents\\Projects\\EmployeeDatabase\\EmployeeDatabase\\database_test\\EmployeeDatabase.Tests.csproj",
         "packagesPath": "C:\\Users\\smoot\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\smoot\\Documents\\Projects\\EmployeeDatabase\\EmployeeDatabase\\EmployeeDatabase.Tests\\obj\\",
+        "outputPath": "C:\\Users\\smoot\\Documents\\Projects\\EmployeeDatabase\\EmployeeDatabase\\database_test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\smoot\\AppData\\Roaming\\NuGet\\NuGet.Config"

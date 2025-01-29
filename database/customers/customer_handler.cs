@@ -1,9 +1,9 @@
 namespace Customers
 {
-    class CustomerHandler
+    public class CustomerHandler
     {
         // Singleton instance
-        private static CustomerHandler _instance;
+        private static CustomerHandler? _instance;
         private List<Customer> customers;
 
         // Private constructor to prevent external instantiation
@@ -49,7 +49,13 @@ namespace Customers
             return false;
         }
 
-        public Label PrintCustomer(int id)
+        public void ClearCustomers()
+        {
+            customers.Clear();
+            return;
+        }
+
+        public Label? PrintCustomer(int id)
         {
             var customer = customers.Find(customer => customer.ID == id);
 
@@ -63,8 +69,7 @@ namespace Customers
 
         public int getIDByName(string name)
         {
-            var customer = customers.Find(customer => customer.ToString().Contains($"Name: {name}"));
-
+            var customer = customers.Find(customer => customer.Name == name);
             if (customer == null)
             {
                 return 0;
@@ -74,12 +79,14 @@ namespace Customers
         }
 
 
+
+
         public int GetNextID()
         {
             // No customers yet, return 0
             if (customers.Count == 0)
             {
-                return 0;
+                return 1;
             }
 
             int maxID = customers.Max(customer => customer.ID);

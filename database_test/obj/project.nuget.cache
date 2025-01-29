@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+x+d4vwds/lhGqhv+8HPoSQht47H3LHp0EQnSFIIJvQsFvQozgmFp3Qj2f77IRP7QTNgdR+ONDvUaSQyEZ8SpA==",
+  "dgSpecHash": "jQ5PIYk7yqIVzZr+it0KZzYrP04/8KTRzBl2Q6W5hbbGkMrw7WE4exrIpZdlCSA0oeSgBqFZ8FOn+5wyLjwXjg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\smoot\\Documents\\Projects\\EmployeeDatabase\\EmployeeDatabase\\EmployeeDatabase.Tests\\EmployeeDatabase.Tests.csproj",
+  "projectFilePath": "C:\\Users\\smoot\\Documents\\Projects\\EmployeeDatabase\\EmployeeDatabase\\database_test\\EmployeeDatabase.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\smoot\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",
     "C:\\Users\\smoot\\.nuget\\packages\\microsoft.codecoverage\\17.5.0\\microsoft.codecoverage.17.5.0.nupkg.sha512",
