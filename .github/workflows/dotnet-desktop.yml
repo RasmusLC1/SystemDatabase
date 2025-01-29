@@ -36,12 +36,16 @@ jobs:
     - name: Setup MSBuild.exe
       uses: microsoft/setup-msbuild@v2
 
+    - name: Restore dependencies
+      run: dotnet restore ${{ env.Solution_Name }}
+
     # Execute all unit tests in the solution
     - name: Build the project
-      run: dotnet build database
+      run: dotnet build ${{ env.Solution_Name }} --configuration ${{ matrix.configuration }} --no-restore
+
       
     # Execute all unit tests in the solution
     - name: Execute unit tests
-      run: dotnet test database_test
+      run: dotnet test ${{ env.Solution_Name }} --configuration ${{ matrix.configuration }} --no-build --verbosity normal
 
 
