@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\smoot\\Documents\\Projects\\EmployeeDatabase\\EmployeeDatabase\\database\\EmployeeDatabase.csproj": {}
+    "C:\\Users\\smoot\\Documents\\Projects\\EmployeeDatabase\\Employeedatabase\\database\\EmployeeDatabase.csproj": {}
   },
   "projects": {
-    "C:\\Users\\smoot\\Documents\\Projects\\EmployeeDatabase\\EmployeeDatabase\\database\\EmployeeDatabase.csproj": {
+    "C:\\Users\\smoot\\Documents\\Projects\\EmployeeDatabase\\Employeedatabase\\database\\EmployeeDatabase.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\smoot\\Documents\\Projects\\EmployeeDatabase\\EmployeeDatabase\\database\\EmployeeDatabase.csproj",
+        "projectUniqueName": "C:\\Users\\smoot\\Documents\\Projects\\EmployeeDatabase\\Employeedatabase\\database\\EmployeeDatabase.csproj",
         "projectName": "EmployeeDatabase",
-        "projectPath": "C:\\Users\\smoot\\Documents\\Projects\\EmployeeDatabase\\EmployeeDatabase\\database\\EmployeeDatabase.csproj",
+        "projectPath": "C:\\Users\\smoot\\Documents\\Projects\\EmployeeDatabase\\Employeedatabase\\database\\EmployeeDatabase.csproj",
         "packagesPath": "C:\\Users\\smoot\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\smoot\\Documents\\Projects\\EmployeeDatabase\\EmployeeDatabase\\database\\obj\\",
+        "outputPath": "C:\\Users\\smoot\\Documents\\Projects\\EmployeeDatabase\\Employeedatabase\\database\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\smoot\\AppData\\Roaming\\NuGet\\NuGet.Config"
